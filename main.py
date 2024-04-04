@@ -8,12 +8,18 @@ import lightning as L
 
 if __name__ == "__main__":
 
+    assert torch.cuda.is_available(), "CUDA is not available. Installing a GPU is highly recommended."
+    # print versions of torch, cuda
+    print("torch version:", torch.__version__)
+    print("cuda version:", torch.version.cuda)
+    print("cudnn version:", torch.backends.cudnn.version())
+
     # Define the model
     autoencoder = LitAutoEncoder(encoder, decoder)
 
    # train the model 
     # (hint: here are some helpful Trainer arguments for rapid idea iteration)
-    trainer = L.Trainer(limit_train_batches=500, max_epochs=1000)
+    trainer = L.Trainer(limit_train_batches=500, max_epochs=100)
     trainer.fit(model=autoencoder, train_dataloaders=train_loader)
 
     
