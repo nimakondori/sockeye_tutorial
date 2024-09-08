@@ -1,13 +1,3 @@
----
-layout: page
-title: UBC ARC Sockeye Tutorial
-description: A comprehensive guide to using UBC's Advanced Research Computing Sockeye cluster
-img: assets/img/ubc_arc.png
-importance: 1
-category: work
-related_publications: false
----
-
 <div class="row">
     <div class="col-sm-8 col-md-6 mx-auto">
         {% include figure.liquid loading="eager" path="assets/img/arc.png" title="UBC ARC Sockeye" class="img-fluid rounded z-depth-1" %}
